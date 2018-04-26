@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title><![CDATA[DatCast]]></title>
+    <description><![CDATA[A cool show about Dat!]]></description>
+    <link>https://datcast-test-jimpick.hashbase.io/</link>
+    <generator>Cast – https://tryca.st/</generator>
+    <lastBuildDate>Thu, 26 Apr 2018 16:07:36 GMT</lastBuildDate>
+    <pubDate>Thu, 26 Apr 2018 15:59:03 GMT</pubDate>
+    <copyright><![CDATA[Copyright Bret Comnes and Jim Pick]]></copyright>
+    <language><![CDATA[en]]></language>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <itunes:author>Bret Comnes and Jim Pick</itunes:author>
+    <itunes:subtitle><![CDATA[A cool show about Dat!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[A cool show about Dat!]]></itunes:summary>
+    <itunes:owner>
+      <itunes:name>Bret Comnes and Jim Pick</itunes:name>
+      <itunes:email>jim@jimpick.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>clean</itunes:explicit>
+    <itunes:image href="https://datcast-test-jimpick.hashbase.io/img/DCUP0.jpg"/>
+    <itunes:category text="Technology">
+      <itunes:category text="Tech News"/>
+    </itunes:category>
+    <item>
+      <title><![CDATA[Dat New Updates]]></title>
+      <description><![CDATA[Test episode 1]]></description>
+      <guid isPermaLink="false">B7H1ISIN-0EPNWMI</guid>
+      <pubDate>Thu, 26 Apr 2018 16:07:26 GMT</pubDate>
+      <enclosure url="https://datcast-test-jimpick.hashbase.io/audio/Dat-News-Updates.mp3" length="439680" type="audio/mpeg"/>
+      <itunes:author></itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:subtitle><![CDATA[Test episode 1]]></itunes:subtitle>
+      <itunes:summary><![CDATA[Test episode 1]]></itunes:summary>
+      <itunes:duration>0:00:27</itunes:duration>
+      <itunes:length>439680</itunes:length>
+      <itunes:keywords></itunes:keywords>
+      
+    </item>
+  </channel>
+</rss>
