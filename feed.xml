@@ -4,7 +4,7 @@
     <description><![CDATA[A cool show about Dat!]]></description>
     <link>https://datcast-test-jimpick.hashbase.io/</link>
     <generator>Cast – https://tryca.st/</generator>
-    <lastBuildDate>Thu, 26 Apr 2018 16:07:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Apr 2018 21:07:13 GMT</lastBuildDate>
     <pubDate>Thu, 26 Apr 2018 15:59:03 GMT</pubDate>
     <copyright><![CDATA[Copyright Bret Comnes and Jim Pick]]></copyright>
     <language><![CDATA[en]]></language>
@@ -14,25 +14,40 @@
     <itunes:summary><![CDATA[A cool show about Dat!]]></itunes:summary>
     <itunes:owner>
       <itunes:name>Bret Comnes and Jim Pick</itunes:name>
-      <itunes:email>jim@jimpick.com</itunes:email>
+      <itunes:email>datcast@jimpick.com</itunes:email>
     </itunes:owner>
     <itunes:explicit>clean</itunes:explicit>
-    <itunes:image href="https://datcast-test-jimpick.hashbase.io/img/DCUP0.jpg"/>
+    <itunes:image href="https://dat-cast.hashbase.io/img/DCUP0.jpg?e=2f42944"/>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <item>
-      <title><![CDATA[Dat New Updates]]></title>
-      <description><![CDATA[Test episode 1]]></description>
-      <guid isPermaLink="false">B7H1ISIN-0EPNWMI</guid>
-      <pubDate>Thu, 26 Apr 2018 16:07:26 GMT</pubDate>
-      <enclosure url="https://datcast-test-jimpick.hashbase.io/audio/Dat-News-Updates.mp3" length="439680" type="audio/mpeg"/>
+      <title><![CDATA[Episode 0]]></title>
+      <description><![CDATA[The first episode, where Bret and Jim try making a podcast for the first time, and explain what they want the show to be.
+
+Links:
+
+* https://peer-to-peer-web.com/los-angeles/2018-04-28
+* https://twitter.com/mafintosh/status/989214862764118016]]></description>
+      <guid isPermaLink="false">2VCD9I31-RLTYB9</guid>
+      <pubDate>Thu, 26 Apr 2018 19:55:26 GMT</pubDate>
+      <enclosure url="https://dat-cast.hashbase.io/audio/datcast-episode-0000-2018-04-26.mp3" length="14677632" type="audio/mpeg"/>
       <itunes:author></itunes:author>
       <itunes:explicit>clean</itunes:explicit>
-      <itunes:subtitle><![CDATA[Test episode 1]]></itunes:subtitle>
-      <itunes:summary><![CDATA[Test episode 1]]></itunes:summary>
-      <itunes:duration>0:00:27</itunes:duration>
-      <itunes:length>439680</itunes:length>
+      <itunes:subtitle><![CDATA[The first episode, where Bret and Jim try making a podcast for the first time, and explain what they want the show to be.
+
+Links:
+
+* https://peer-to-peer-web.com/los-angeles/2018-04-28
+* https://twitter.com/mafintosh/status/989214862764118016]]></itunes:subtitle>
+      <itunes:summary><![CDATA[The first episode, where Bret and Jim try making a podcast for the first time, and explain what they want the show to be.
+
+Links:
+
+* https://peer-to-peer-web.com/los-angeles/2018-04-28
+* https://twitter.com/mafintosh/status/989214862764118016]]></itunes:summary>
+      <itunes:duration>0:15:17</itunes:duration>
+      <itunes:length>14677632</itunes:length>
       <itunes:keywords></itunes:keywords>
       
     </item>

@@ -1,0 +1,827 @@
+<!DOCTYPE html><html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		@-webkit-keyframes spin {
+			from {
+				-webkit-transform: rotate(0);
+			}
+			to {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+	
+		* {
+			box-sizing: border-box;
+		}
+		
+		.group:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		
+		body {
+			background: #FBFCFC;
+			font-size: 16px;
+			color: #475f77;
+			font-family: "ff-tisa-web-pro", sans-serif;
+			margin: 0px;
+		}
+
+		.castette-wrapper {
+			width: 718px;
+			margin: auto;
+			padding: 40px 0;
+			text-align: center;
+		}
+
+		@media screen and (max-width: 720px) {
+			.castette-wrapper {
+				width: 100%;
+			}
+		}
+
+		h1 {
+			font-family: "brandon-grotesque", sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 32px;
+			text-transform: uppercase;
+			margin: 10px 0 0 0;
+		}
+
+		h2 {
+			font-family: "brandon-grotesque", sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 22px;
+			text-transform: uppercase;
+			margin: 0;
+			line-height: 1.2;
+		}
+
+		.owner-field {
+			font-family: "ff-tisa-web-pro", sans-serif;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			margin: 0;
+			line-height: 1.2;
+			color: #A6A49E;
+			text-align: center;
+			text-transform: none;
+		}
+
+		h3 {
+			font-family: "ff-tisa-web-pro", sans-serif;
+			font-weight:200;
+			font-style:italic;
+			color: #A6A49E;
+			margin: 0;
+			font-size: 13px;
+		}
+
+		.owner-label {
+			font-family: "ff-tisa-web-pro", sans-serif;
+			font-weight:200;
+			font-style:italic;
+			color: #A6A49E;
+			margin: 0;
+			font-size: 13px;
+		}
+
+		.centre {
+			position: absolute;
+			left: 50%;
+			padding-top: 10px;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+
+		p {
+			margin: 0px;
+		}
+
+		.share-link{
+			margin-top:8px;
+			font-size:11px;
+			font-style: italic;
+			color: #A6A49E;
+		}
+
+		#episode-list {
+			margin-top: 40px;
+			padding: 0;
+			background-color: white;
+			border-radius: 22px;
+			border: 1px solid #E8E7E4;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+			list-style: none;
+			text-align: left;
+		}
+
+		.episode-item {
+			position: relative;
+			padding: 20px 60px 20px 20px;
+			border-bottom: 1px solid #E8E7E4;
+		}
+		
+		.episode-item.expanded {
+			padding-right: 20px;
+		}
+
+		.episode-inner {
+			position: relative;
+			margin-top: 10px;
+		}
+		
+		.expand-link{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 60px;
+			height: 100%;
+			border-left: 1px solid #E8E7E4;
+			background-image: url("/castette/icon-dropdown.png");
+			background-size: 40px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+		}
+
+		.dont-break-out {
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			-ms-word-break: break-all;
+			word-break: break-all;
+			word-break: break-word;
+		}
+		
+		.expand-link:hover {
+			cursor: pointer;
+		}
+
+		li:last-child {
+			border-bottom: none; 
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.right {
+			float:right;
+		}
+
+		img {
+			border-radius: 2px;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+		}
+
+		footer {
+			position: fixed;
+			width: 99%;
+			bottom: 0;
+			font-size: 12px;
+			background: #FBFCFC;
+			z-index: 10000; 
+		}
+		footer.centered {
+			text-align: center; 
+		}
+		footer #footer-content {
+			height: 30px;
+			border-top: 1px solid #E8E7E4; 
+		}
+		footer #footer-content p {
+			display: inline-block;
+			padding-top: 5px;
+			color: #A6A49E; 
+		}
+		footer #footer-content .left {
+			float: left; 
+		}
+		footer #footer-content .center {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%); 
+		}
+		footer #footer-content .right {
+			float: right; 
+		}
+
+		a {
+			color: #87c3ff;
+			text-decoration: none;
+			transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+		}
+		a a:hover {
+			color: #4599ED;
+			cursor: pointer;
+			cursor: hand;
+		}
+
+		.controls {
+			width: 162px;
+			margin: 20px 0 0 0;
+			border-radius: 4px;
+			border: 1px solid #E8E7E4;
+			background-color: #FFF;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+			font-size: 0;
+			transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+		}
+		
+		.controls:hover {
+			border: 1px solid #A6A49E;
+		}
+
+		.controls .playback-control {
+			position: relative;
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background-color: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			border-right: 1px solid #E8E7E4;
+			transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+			z-index:500;
+		}
+		.controls .playback-control:first-child {
+			border-radius: 4px 0 0 4px;
+		}
+
+		.controls .playback-control:last-child {
+			border-radius: 0 4px 4px 0;
+			border-right: none;
+		}
+
+		.controls .playback-control:hover {
+			background-color: #F7F8F9;
+			cursor: pointer;
+		}
+
+		.controls .playback-control p {
+			position: absolute;
+			display: block;
+			width: 20px;
+			height: 20px;
+			left: 50%;
+			margin-top: 13px;
+			margin-left: -10px;
+			text-align: center;
+			color: #475f77;
+			font-family: "brandon-grotesque", sans-serif;
+			font-size: 11px;
+			letter-spacing: -1px;
+		}
+
+		#rewind-button {
+			background-image: url("/castette/icon-rewind.png");
+			background-size: 40px auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		#play-pause-button {
+			width: 80px;
+			background-image: url("/castette/icon-playpause.png");
+			background-size: 80px auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		#fastforward-button {
+			background-image: url("/castette/icon-fastforward.png");
+			background-size: 40px auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		.buttons-group {
+			position: relative;
+			height: 40px;
+		}
+
+		.spinner-holder {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 3px;
+			right: 3px;
+			background: white;
+			z-index: 1000;
+		}
+
+		.hidden {
+			display:none;
+		}
+
+		.spiner-preload { 
+			background: url("/castette/cast-record-blue.png") no-repeat -9999px -9999px; 
+		} 
+
+		.spinner-overlay {
+			background-image: url("/castette/cast-record-blue.png");
+			background-repeat: no-repeat;
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			-webkit-animation: spin 0.5s linear infinite;
+			background-position: center;
+		}
+
+		.scrubber-wrapper {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			padding-left: 182px;
+		}
+
+		.scrubber-wrapper .scrubber {
+			position: relative;
+			width: 100%;
+			height: 8px;
+			border-radius: 4px;
+			border: 1px solid #E8E7E4;
+			background-color: #F7F8F9;
+		}
+		
+		.scrubber-wrapper .scrubber .elapsed-bar {
+			position: absolute;
+			left: 0;
+			width: 0;
+			height: 100%;
+			border-radius: 4px;
+			background-color: #475f77;
+			transition: width 0.1s;
+		}
+		
+		.scrubber-wrapper .timestamp {
+			color: #A6A49E;
+		}
+		
+		.scrubber-wrapper .timestamp.left {
+			float: left;
+		}
+		
+		.scrubber-wrapper .timestamp.right {
+			float: right;
+		}
+		
+		@media screen and (max-width: 560px){
+			.castette-wrapper {
+				width: 100%;
+			}
+
+			.centre {
+				position: static;
+				left: none;
+				padding-top: 0px;
+				-webkit-transform: none;
+				transform: none;
+				margin-bottom: 10px;
+			}
+
+			body {
+				font-size: 12px;
+				margin: 8px;
+			}
+
+			h1 {
+				font-size: 20px;
+			}
+
+			h2 {
+				font-size: 16px;
+			}
+
+			.episode-title-active{
+				width: 100%;
+			}
+
+			.share-link {
+				font-size: 12px;
+			}
+			
+			.controls {
+				margin: 20px auto;
+			}
+			
+			.scrubber-wrapper {
+				position: static;
+				padding-left: 0;
+			}
+
+			.controls .playback-control:hover {
+				background-color: white;
+				cursor: pointer;
+			}
+
+			.controls:hover {
+				border: 1px solid #E8E7E4;
+			}
+
+			a a:hover {
+				color: none;
+			}
+		}
+
+		.cast-badge {
+			margin-top: 20px;
+			margin-left: auto;
+  			margin-right: auto;
+			font-family: "brandon-grotesque", sans-serif;
+			font-style: italic;
+			font-weight: 400;
+			font-size: 13px;
+			color: #475f77;
+			text-align:center;
+		}
+
+		.cast-badge > a {
+			font-family: "brandon-grotesque", sans-serif;
+			font-style: italic;
+			font-weight: 400;
+			font-size: 13px;
+			color: #475f77;
+			box-shadow: none;
+		}
+
+		.cast-badge-left {
+			font-family: "brandon-grotesque", sans-serif;
+			font-style: italic;
+			font-weight: 400;
+			font-size: 13px;
+			color: #475f77;
+			text-align: left;
+			display: inline;
+			float: left;
+		}
+
+		.cast-badge-left > a > img {
+			box-shadow: none;
+		}
+
+		.cast-rss-left {
+			display: inline;
+			float: left;
+			box-shadow: none;
+		}
+
+		.cast-badge-right {
+			display: inline;
+			float: right;
+		}
+
+		.cast-badge-right > a {
+			float: right;
+		}
+		.cast-rss-left > a > img {
+			box-shadow: none;
+		}
+
+		.cast-badge-right > a > img {
+			box-shadow: none;
+		}
+
+		.cast-badge > a > img {
+			box-shadow: none;
+		}
+
+		.cast-badge-wrapper {
+			width: 100%;
+			overflow:auto; 
+		}
+
+		.tips-bar {
+			position: relative;
+			width: 100%;
+			background: #FFD000;
+			color: white;
+			z-index: 10;
+			text-align: center;
+			padding-bottom: 8px;
+			padding-top: 5px;
+			font-family: "ff-tisa-web-pro",sans-serif;
+			font-size: 16px;
+		}
+
+		.tips-bar #tips-text {
+			cursor: pointer;
+		}
+
+
+	</style>
+	<title>DatCast</title>
+</head>
+
+<body>
+	<div class="castette-wrapper spiner-preload">
+		<img src="/img/DCUP0.jpg" id="feed-image" style="width: 60px; height: 60px">
+		
+		<h1 style="text-align: center;"><span id="feed-title">DatCast</span></h1>
+		<h2 class="owner-field"><span id="feed-owner"><a href="mailto:datcast@jimpick.com">Bret Comnes and Jim Pick</a></span></h2>	
+
+		<ul id="episode-list">
+			<li class="episode-item" id="episode-B7H1ISIN-0EPNWMI">
+				<h2><span class="episode-title" id="episode-title-B7H1ISIN-0EPNWMI">Dat New Updates</span></h2>
+				<h3>Apr 26th 2018</h3>
+
+				<div class="episode-inner hidden" id="episodeinner-B7H1ISIN-0EPNWMI">
+					<p id="description-B7H1ISIN-0EPNWMI">Test episode 1</p>
+					<p class="share-link">episode link (<a onclick="shareCurrentTime(this)" id="share-current-B7H1ISIN-0EPNWMI">current time</a>) &nbsp;&nbsp;☞&nbsp;&nbsp;&nbsp;<span id="share-link-B7H1ISIN-0EPNWMI" class="dont-break-out sharelink" onclick="selectText('share-link-B7H1ISIN-0EPNWMI')" title="This Castette link will link directly to this episode.">https://datcast-test-jimpick.hashbase.io/</span></p>
+
+					<div class="controls">
+						<div class="buttons-group">
+							<div class="spinner-holder hidden" data-spinner="audio-B7H1ISIN-0EPNWMI">
+								<div class="spinner-overlay"></div>
+							</div>
+							<div class="playback-control" id="rewind-button" onclick="backButton(this)" data-player="audio-B7H1ISIN-0EPNWMI"><p>15</p></div>
+							<div class="playback-control" id="play-pause-button" onclick="playButton(this)" data-player="audio-B7H1ISIN-0EPNWMI"></div>
+							<div class="playback-control" id="fastforward-button" onclick="forwardButton(this)"  data-player="audio-B7H1ISIN-0EPNWMI"><p>15</p></div>
+						</div>
+					</div>
+					<div class="scrubber-wrapper group">
+						<div class="scrubber" onclick="scrubberClick(this, event)" data-player="audio-B7H1ISIN-0EPNWMI">
+							<div class="elapsed-bar" style="width: 0%;" id="elapsed-B7H1ISIN-0EPNWMI"></div>
+						</div>
+						<div class="timestamp left" id="timestamp-left-B7H1ISIN-0EPNWMI">0:00:00</div>
+						<div class="timestamp right" id="timestamp-right-B7H1ISIN-0EPNWMI">0:00:27</div>
+					</div>
+
+				</div>
+
+				<a onclick="expandButtonClick(this)" id="expand-B7H1ISIN-0EPNWMI" class="expand-link" title="Expand episode"></a>
+
+				<audio id="audio-B7H1ISIN-0EPNWMI" preload="none" class="hidden">
+					<source src="/audio/Dat-News-Updates.mp3" class="castette-audio" type="audio/mpeg" id="audio-source-B7H1ISIN-0EPNWMI">
+				</audio>
+
+			</li>
+		</ul>
+
+		<div class="cast-badge-wrapper">
+			<div></div>
+			<div class="cast-rss-left"><a href="/DCUP0.xml"><img src="/castette/CastRSS.svg"></a></div>
+			<div class="cast-badge-right"><a href="https://tryca.st/?ref=castette" target="_blank"><img src="/castette/CastBadge4.svg"></a></div>
+		</div>
+
+		<div class="push"></div>
+		</div>		
+		</body>
+
+		<script>
+			window.onload = function(){
+				var refString = document.referrer;
+				var pathString = document.location.href;
+				if (refString && refString !== "" && refString.indexOf("?ep=") !== -1){
+					parseURLDeepLinks(refString);
+				} else if (pathString && pathString !== "" && pathString.indexOf("?ep=") !== -1) {
+					parseURLDeepLinks(pathString);
+				} else {
+					var episodeItems = document.getElementsByClassName("episode-item");
+					if (episodeItems && episodeItems.length > 0){
+						var episodeItemID = episodeItems[0].id;
+						unhideEpisodeWithID(episodeItemID);
+					}
+				}
+				parent.postMessage({title: document.title}, '*');
+				updateSubdomainURLs();
+			};
+
+			function parseURLDeepLinks(urlString){				
+				console.log("[parseURLDeepLinks] urlString=" + urlString);
+				var parameterString = urlString.split("?")[1];
+				var parameterArray = parameterString.split("&");
+				var episodeID, episodeTime;
+				for (var i in parameterArray){
+					var splitParam = parameterArray[i].split("=");
+					if (splitParam[0] === "ep"){
+						episodeID = splitParam[1];
+					} else if (splitParam[0] === "t"){
+						episodeTime = splitParam[1];
+					}
+				}
+				unhideEpisodeWithID(episodeID, episodeTime);
+			}
+
+			function expandButtonClick(clickedElement){
+				var clickedID = clickedElement.id;
+				var episodeID = clickedID.replace("expand-", "");
+								
+				unhideEpisodeWithID(episodeID);
+			}
+
+			function unhideEpisodeWithID(episodeID, episodeTime){
+				if (episodeID.indexOf("episode-") === 0) episodeID = episodeID.replace("episode-", "");
+				var heightBefore = document.getElementById("episode-" + episodeID).clientHeight;
+				if (episodeTime) {
+					var episodeElement = document.getElementById("audio-" + episodeID);
+					document.getElementById("audio-" + episodeID).preload = "audio";
+					console.log("[unhideEpisodeWithID] deep link to episodeTime=" + episodeTime + ", waiting for audio");
+					try{
+						waitForPlayable(episodeElement, function(){
+							episodeElement.currentTime = episodeTime;
+						});
+					} catch (e){
+						console.log("[unhideEpisodeWithID] error: " + e);
+					}
+				}
+				document.getElementById("audio-" + episodeID).classList.remove("hidden");
+				document.getElementById("episodeinner-" + episodeID).classList.remove("hidden");
+				document.getElementById("expand-" + episodeID).classList.add("hidden");
+				document.getElementById("episode-" + episodeID).classList.add("expanded");
+			}
+
+			var heightDelta = 0;
+
+			function selectText(elementID){
+				if (window.getSelection) {
+					var range = document.createRange();
+					range.selectNode(document.getElementById(elementID));
+					window.getSelection().addRange(range);
+				} else if (document.selection) {
+					var range = document.body.createTextRange();
+					range.moveToElementText(document.getElementById(elementID));
+					range.select();
+				}
+			}
+
+			function shareCurrentTime(clickedElement){
+				var clickedID = clickedElement.id;
+				var episodeID = clickedID.replace("share-current-", "");
+				var episodeCurrentTime = document.getElementById("audio-" + episodeID).currentTime;
+				episodeCurrentTime = parseInt(episodeCurrentTime);
+				var shareLinkStripped = document.getElementById("share-link-" + episodeID).innerHTML;
+				shareLinkStripped = shareLinkStripped.split("&t=")[0];
+				shareLinkStripped = shareLinkStripped.split("&amp;t=")[0];
+				document.getElementById("share-link-" + episodeID).innerHTML = shareLinkStripped + "&t=" + episodeCurrentTime;
+			}
+
+			function playButton(clickedElement){
+				var playerID = clickedElement.dataset.player;
+				console.log("[playButton] clicked; playerID=" + playerID);
+
+				var player = document.getElementById(playerID);
+				if (isTagPlaying(playerID)){
+					console.log("[playButton] we're playing, so pausing");
+					player.pause();
+				} else {
+					console.log("[playButton] we're not playing; waiting for playable state");
+					stopAllPlayback();
+					waitForPlayable(player, function(){
+						console.log("[playButton] playback ready; playing");
+						player.play();
+					});
+				}
+			}
+
+			function stopAllPlayback(){
+				var audioTags = document.getElementsByTagName("audio");
+				for (var i = 0; i < audioTags.length; i++) {
+					if (isTagPlaying(audioTags[i].id)) {
+						console.log("[stopAllPlayback] pausing " + audioTags[i].id);
+						audioTags[i].pause();
+					}
+				}
+			}
+
+			function waitForPlayable(playerElement, callback){
+				if (playerElement.readyState !== 0){
+					callback();
+				} else {
+					showSpinnerForPlayer(playerElement);
+					console.log("[waitForPlayable] element readyState=" + playerElement.readyState + ", waiting for oncanplay");
+					playerElement.oncanplay = function(){
+						hideSpinnerForPlayer(playerElement);
+						playerElement.oncanplay = null;
+						callback();
+					}
+					playerElement.load();
+				}
+			}
+
+			function showSpinnerForPlayer(playerElement){
+				var playerID = playerElement.id;
+				console.log("[showSpinnerForPlayer] playerID=" + playerID);
+				var spinner = document.querySelectorAll("[data-spinner='" + playerID + "']")[0];
+				console.log(spinner);
+				spinner.className = spinner.className.replace(" hidden", "");
+			}
+
+			function hideSpinnerForPlayer(playerElement){
+				var playerID = playerElement.id;
+				console.log("[hideSpinnerForPlayer] playerID=" + playerID);
+				var spinner = document.querySelectorAll("[data-spinner='" + playerID + "']")[0];
+				console.log(spinner);
+				spinner.className = spinner.className + " hidden";
+			}
+
+			function backButton(clickedElement){
+				var playerID = clickedElement.dataset.player;
+				console.log("[backButton] clicked; playerID=" + playerID);
+				var player = document.getElementById(playerID);
+				waitForPlayable(player, function(){
+					player.currentTime -= 15;
+				});
+			}
+
+			function forwardButton(clickedElement){
+				var playerID = clickedElement.dataset.player;
+				console.log("[backButton] clicked; playerID=" + playerID);
+				var player = document.getElementById(playerID);
+				waitForPlayable(player, function(){
+					player.currentTime += 15;
+				});
+			}
+
+			function scrubberClick(clickedElement, clickEvent){
+				var playerID = clickedElement.dataset.player;
+				var clickPosition = clickEvent.offsetX;
+				var scrubberWidth = clickedElement.clientWidth;
+				var clickPercentage = clickPosition / scrubberWidth;
+				console.log("[scrubberClick] clicked; playerID=" + playerID + ", click=" + clickPercentage);
+				var player = document.getElementById(playerID);
+				waitForPlayable(player, function(){
+					player.currentTime = clickPercentage * player.duration;
+				});
+			}
+
+			setInterval(playheadUpdater, 100);
+
+			function isTagPlaying(tagName){
+				if (document.getElementById(tagName).duration > 0 && !document.getElementById(tagName).paused){
+					return true;
+				}
+				return false;
+			}
+
+			function playheadUpdater(){
+				var audioTags = document.getElementsByTagName("audio");
+
+				function setElapsed(guid, elapsed, total){
+					var percentElapsed = (elapsed / total) * 100;
+					document.getElementById("elapsed-" + guid).style.width = percentElapsed + "%";
+					document.getElementById("timestamp-left-" + guid).innerHTML = timeToHumanReadable(elapsed * 1000.0);
+					if (total){
+						document.getElementById("timestamp-right-" + guid).innerHTML = timeToHumanReadable(total * 1000.0);
+					}
+				}
+
+				function timeToHumanReadable(timeInMS) {
+					if (isNaN(timeInMS)){
+						return "";
+					}
+					var timeInS = (parseInt( timeInMS / 1000 ) % 60).toString();        // buddy ignore:line
+					var timeInM = (parseInt( timeInMS / (1000 * 60) ) % 60).toString(); // buddy ignore:line
+					var timeInH = parseInt( timeInMS / (1000 * 60 * 60) ).toString();   // buddy ignore:line
+
+					// pad us out to 2 digits
+					while (timeInS.length < 2) timeInS = "0" + timeInS; // buddy ignore:line
+					while (timeInM.length < 2) timeInM = "0" + timeInM; // buddy ignore:line
+
+					var returnString = timeInH + ":" + timeInM + ":" + timeInS;
+					return returnString;
+				}
+
+				for (var i = 0; i < audioTags.length; i++){
+					var currentTag = audioTags[i];
+					var currentTagName = currentTag.id;
+					var currentGUID = currentTagName.replace("audio-", "");
+					var currentElapsed = currentTag.currentTime;
+					var currentTotal = currentTag.duration;
+
+					setElapsed(currentGUID, currentElapsed, currentTotal);
+				}
+
+			}
+
+			function updateSubdomainURLs(){
+				var parentURL = getParentURL();
+				var subdomainRegex = /:\/\/.+\.cast.rocks\//gi;
+				var subdomainExtractionRegex = /(https?:\/\/)(.*)(\.cast\.rocks)/gi;
+				var replacementRegex = /(https?:\/\/)(.*\.html)(\?)/gi;
+				if (parentURL && parentURL.match(subdomainRegex)) {
+					var subdomain = subdomainExtractionRegex.exec(parentURL)[2];
+					var shareLinkArray = document.getElementsByClassName("sharelink");
+					for (var i = 0; i < shareLinkArray.length; i++) {
+						var slElement = shareLinkArray[i];
+						var newInner = slElement.innerHTML.replace(replacementRegex, "$1" + subdomain + ".cast.rocks/$3");
+						slElement.innerHTML = newInner;
+					}
+				}
+			}
+
+			function getParentURL(){
+				return (window.location != window.parent.location) ? document.referrer : document.location.href;
+			}
+
+		</script>
+</html>
