@@ -16,7 +16,7 @@ fetch('http://datcast.cast.rocks/feed.xml')
         (_, g1) => `https://dat-cast.hashbase.io/img/${g1}.jpg`
       )
       .replace(
-        /http:\/\/cast.rocks\/hosting\/5887\/(.*)\.mp3/,
+        /http:\/\/cast.rocks\/hosting\/5887\/(.*)\.mp3/gm,
         (_, g1) => {
           mp3s.push(g1)
           return `https://dat-cast.hashbase.io/audio/${g1}.mp3`
@@ -41,27 +41,27 @@ fetch('http://datcast.cast.rocks/feed.xml')
   .then(text => {
     text = text
       .replace(
-        /https:\/\/cast-cache\.s3\.amazonaws.com(\/castette\/.*\.png)/g,
+        /https:\/\/cast-cache\.s3\.amazonaws.com(\/castette\/.*\.png)/gm,
         (_, g1) => g1
       )
       .replace(
-        /(https:)?\/\/cast\.rocks\/hosting\/5887\/feeds\/(DCUP0\.jpg)/g,
+        /(https:)?\/\/cast\.rocks\/hosting\/5887\/feeds\/(DCUP0\.jpg)/gm,
         (_, g1, g2) => `/img/${g2}`
       )
       .replace(
-        /(https:)?\/\/cast\.rocks\/hosting\/5887\/feeds\/(DCUP0\.html)/g,
+        /(https:)?\/\/cast\.rocks\/hosting\/5887\/feeds\/(DCUP0\.html)/gm,
         (_, g1, g2) => `/${g2}`
       )
       .replace(
-        /\/\/cast\.rocks\/hosting\/5887\/(.*\.mp3)/g,
+        /\/\/cast\.rocks\/hosting\/5887\/(.*\.mp3)/gm,
         (_, g1) => `/audio/${g1}`
       )
       .replace(
-        /https:\/\/cast-cache\.s3\.amazonaws.com\/(.*\.svg)/g,
+        /https:\/\/cast-cache\.s3\.amazonaws.com\/(.*\.svg)/gm,
         (_, g1) => `/castette/${g1}`
       )
       .replace(
-        /http:\/\/cast\.rocks\/hosting\/5887\/feeds\/DCUP0\.xml/g,
+        /http:\/\/cast\.rocks\/hosting\/5887\/feeds\/DCUP0\.xml/gm,
         () => `/feed.xml`
       )
     text = text.split('\n')
@@ -69,6 +69,7 @@ fetch('http://datcast.cast.rocks/feed.xml')
       .join('\n')
     fs.writeFileSync('DCUP0.html', text)
   })
+  /*
   .then(() => {
     console.log('Downloading mp3s')
     return mp3s.reduce((prevPromises, mp3) => {
@@ -84,5 +85,6 @@ fetch('http://datcast.cast.rocks/feed.xml')
       return promise
     }, Promise.resolve())
   })
+  */
   .then(() => { console.log('Done.') })
   .catch(err => console.error('Error', err))

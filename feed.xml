@@ -2,9 +2,9 @@
   <channel>
     <title><![CDATA[DatCast]]></title>
     <description><![CDATA[A cool show about Dat!]]></description>
-    <link>https://datcast-test-jimpick.hashbase.io/</link>
+    <link>https://dat-cast.hashbase.io/</link>
     <generator>Cast – https://tryca.st/</generator>
-    <lastBuildDate>Fri, 27 Apr 2018 02:03:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 May 2018 01:53:45 GMT</lastBuildDate>
     <pubDate>Thu, 26 Apr 2018 15:59:03 GMT</pubDate>
     <copyright><![CDATA[Copyright Bret Comnes and Jim Pick]]></copyright>
     <language><![CDATA[en]]></language>
@@ -21,6 +21,30 @@
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
+    <item>
+      <title><![CDATA[Episode 1 - Mathias Buus (@mafintosh)]]></title>
+      <description><![CDATA[We invite Mathias onto the show and talk about the upcoming Dat Multiwriter feature
+
+* http://github.com/mafintosh
+* https://peer-to-peer-web.com/]]></description>
+      <guid isPermaLink="false">C89G1GIQ-6PQFR</guid>
+      <pubDate>Thu, 10 May 2018 01:53:44 GMT</pubDate>
+      <enclosure url="https://dat-cast.hashbase.io/audio/datcast-episode-0001-2018-05-09-mafintosh.mp3" length="53279204" type="audio/mpeg"/>
+      <itunes:author></itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:subtitle><![CDATA[We invite Mathias onto the show and talk about the upcoming Dat Multiwriter feature
+
+* http://github.com/mafintosh
+* https://peer-to-peer-web.com/]]></itunes:subtitle>
+      <itunes:summary><![CDATA[We invite Mathias onto the show and talk about the upcoming Dat Multiwriter feature
+
+* http://github.com/mafintosh
+* https://peer-to-peer-web.com/]]></itunes:summary>
+      <itunes:duration>1:11:45</itunes:duration>
+      <itunes:length>53279204</itunes:length>
+      <itunes:keywords></itunes:keywords>
+      
+    </item>
     <item>
       <title><![CDATA[Episode 0 - Welcome to the DatCast!]]></title>
       <description><![CDATA[The first episode, where Bret and Jim try making a podcast for the first time, and explain what they want the show to be.
