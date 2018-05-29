@@ -73,10 +73,11 @@ fetch('http://datcast.cast.rocks/feed.xml')
       .join('\n')
     fs.writeFileSync('DCUP0.html', text)
   })
-  /*
   .then(() => {
     console.log('Downloading mp3s')
     return mp3s.reduce((prevPromises, mp3) => {
+      const output = `./audio/${mp3}.mp3`
+      if (fs.existsSync(output)) return prevPromises
       const promise = prevPromises
         .then(() => {
           console.log(`Downloading: ${mp3}.mp3`)
@@ -85,10 +86,9 @@ fetch('http://datcast.cast.rocks/feed.xml')
           return fetch(url)
         })
         .then(res => res.buffer())
-        .then(buf => { fs.writeFileSync(`./audio/${mp3}.mp3`, buf) })
+        .then(buf => { fs.writeFileSync(output, buf) })
       return promise
     }, Promise.resolve())
   })
-  */
   .then(() => { console.log('Done.') })
   .catch(err => console.error('Error', err))
