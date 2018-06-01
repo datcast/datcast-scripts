@@ -68,6 +68,10 @@ fetch('http://datcast.cast.rocks/feed.xml')
         /<div><\/div>/gm,
         '<div class="cast-rss-left"><a href="/feed.xml" target="_top"><img src="/castette/CastRSS.svg"></a></div>'
       )
+      .replace(
+        /(a.*href="[^"]*")>/gm,
+        (_, g1) => `${g1} target="_blank">`
+      )
     text = text.split('\n')
       .filter(line => !line.match(/script.*typekit/i))
       .join('\n')
