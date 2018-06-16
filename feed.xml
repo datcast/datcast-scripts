@@ -4,7 +4,7 @@
     <description><![CDATA[A cool show about Dat!]]></description>
     <link>https://dat-cast.hashbase.io/</link>
     <generator>Cast – https://tryca.st/</generator>
-    <lastBuildDate>Fri, 01 Jun 2018 23:07:58 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jun 2018 07:17:14 GMT</lastBuildDate>
     <pubDate>Thu, 26 Apr 2018 15:59:03 GMT</pubDate>
     <copyright><![CDATA[Copyright Bret Comnes and Jim Pick]]></copyright>
     <language><![CDATA[en]]></language>
@@ -21,6 +21,151 @@
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
+    <item>
+      <title><![CDATA[Episode 3 - Tara Vancil and Paul Frazee]]></title>
+      <description><![CDATA[<p>
+Our guests on this episode are Tara Vancil and Paul Frazee from
+Blue Link Labs, the makers of Beaker Browser!
+</p>
+
+<h2>Highlighted Events</h2>
+
+<ul>
+  <li><a href="https://blog.datproject.org/2018/06/11/may-community-call-recap/">Code for Science and Society May Community Call</a></li>
+  <li><a href="https://2018.jsconf.eu/">JSConfEU</a></li>
+</ul>
+
+<h2>Guests: Tara Vancil and Paul Frazee</h2>
+
+<ul>
+  <li><a href="https://taravancil.com/">Tara Vancil</a></li>
+  <li><a href="https://pfrazee.github.io/">Paul Frazee</a></li>
+  <li><a href="https://beakerbrowser.com/">Beaker Browser</a></li>
+  <li><a href="https://bluelinklabs.com/">Blue Link Labs</a></li>
+</ul>
+
+<h2>Web Extensions Links</h2>
+
+<ul>
+  <li><a href="https://github.com/sammacbeth/dat-fox">dat-fox</a></li>
+  <li><a href="https://github.com/HughIsaacs2/DatPart">DatPart</a></li>
+  <li><a href="https://github.com/mozilla/libdweb">libdweb</a></li>
+</ul>
+
+<h2>Hashbase and Homebase</h2>
+
+<ul>
+  <li><a href="https://hashbase.io/">Hashbase</a></li>
+  <li><a href="https://github.com/beakerbrowser/homebase">Homebase</a></li>
+</ul>
+
+
+<h2>Dat Enhancement Proposals</h2>
+
+<ul>
+  <li><a href="https://www.datprotocol.com/deps/">DEPs</a></li>
+  <li><a href="https://github.com/datprotocol/working-group">Working Group</a></li>
+</ul>
+
+<h2>More Projects</h2>
+
+<ul>
+  <li><a href="https://pfrazee.github.io/blog/nodevms-alpha">NodeVMS alpha: trustless execution of services on nodejs</a></li>
+  <li><a href="https://github.com/beakerbrowser/fritter">Fritter</a></li>
+  <li><a href="https://github.com/beakerbrowser/webdb">WebDB</a></li>
+</ul>
+
+<h2>Dat vs. IPFS vs. Secure Scuttlebutt</h2>
+
+<ul>
+  <li><a href="https://datproject.org/">Dat Project</a></li>
+  <li><a href="https://ipfs.io/">IPFS</a></li>
+  <li><a href="https://www.scuttlebutt.nz/">Secure Scuttlebutt</a></li>
+  <li><a href="https://github.com/ipfs/faq/issues/119">IPFS vs Dat</a></li>
+  <li><a href="https://hackmd.io/Nmdum17tQQKqH6pzAMT15Q?view">Gozala's comparison</a></li>
+</ul>
+]]></description>
+      <guid isPermaLink="false">GJJO1BZO-6MVX6R</guid>
+      <pubDate>Sat, 16 Jun 2018 07:17:14 GMT</pubDate>
+      <enclosure url="https://dat-cast.hashbase.io/audio/datcast-episode-0003-2018-06-16-tara-vancil-and-paul-frazee.mp3" length="64741880" type="audio/mpeg"/>
+      <itunes:author></itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:subtitle><![CDATA[<p>
+Our guests on this episode are Tara Vancil and Paul Frazee from
+Blue Link Labs, the makers of Beaker Browser!
+</p>
+
+<h2>Highlighted Events</h2>
+
+<ul>
+  <li><a href="https://blog.datproject.org/2018/06/11/may-community-call-recap/">Code for Scienc ...]]></itunes:subtitle>
+      <itunes:summary><![CDATA[<p>
+Our guests on this episode are Tara Vancil and Paul Frazee from
+Blue Link Labs, the makers of Beaker Browser!
+</p>
+
+<h2>Highlighted Events</h2>
+
+<ul>
+  <li><a href="https://blog.datproject.org/2018/06/11/may-community-call-recap/">Code for Science and Society May Community Call</a></li>
+  <li><a href="https://2018.jsconf.eu/">JSConfEU</a></li>
+</ul>
+
+<h2>Guests: Tara Vancil and Paul Frazee</h2>
+
+<ul>
+  <li><a href="https://taravancil.com/">Tara Vancil</a></li>
+  <li><a href="https://pfrazee.github.io/">Paul Frazee</a></li>
+  <li><a href="https://beakerbrowser.com/">Beaker Browser</a></li>
+  <li><a href="https://bluelinklabs.com/">Blue Link Labs</a></li>
+</ul>
+
+<h2>Web Extensions Links</h2>
+
+<ul>
+  <li><a href="https://github.com/sammacbeth/dat-fox">dat-fox</a></li>
+  <li><a href="https://github.com/HughIsaacs2/DatPart">DatPart</a></li>
+  <li><a href="https://github.com/mozilla/libdweb">libdweb</a></li>
+</ul>
+
+<h2>Hashbase and Homebase</h2>
+
+<ul>
+  <li><a href="https://hashbase.io/">Hashbase</a></li>
+  <li><a href="https://github.com/beakerbrowser/homebase">Homebase</a></li>
+</ul>
+
+
+<h2>Dat Enhancement Proposals</h2>
+
+<ul>
+  <li><a href="https://www.datprotocol.com/deps/">DEPs</a></li>
+  <li><a href="https://github.com/datprotocol/working-group">Working Group</a></li>
+</ul>
+
+<h2>More Projects</h2>
+
+<ul>
+  <li><a href="https://pfrazee.github.io/blog/nodevms-alpha">NodeVMS alpha: trustless execution of services on nodejs</a></li>
+  <li><a href="https://github.com/beakerbrowser/fritter">Fritter</a></li>
+  <li><a href="https://github.com/beakerbrowser/webdb">WebDB</a></li>
+</ul>
+
+<h2>Dat vs. IPFS vs. Secure Scuttlebutt</h2>
+
+<ul>
+  <li><a href="https://datproject.org/">Dat Project</a></li>
+  <li><a href="https://ipfs.io/">IPFS</a></li>
+  <li><a href="https://www.scuttlebutt.nz/">Secure Scuttlebutt</a></li>
+  <li><a href="https://github.com/ipfs/faq/issues/119">IPFS vs Dat</a></li>
+  <li><a href="https://hackmd.io/Nmdum17tQQKqH6pzAMT15Q?view">Gozala's comparison</a></li>
+</ul>
+]]></itunes:summary>
+      <itunes:duration>1:24:45</itunes:duration>
+      <itunes:length>64741880</itunes:length>
+      <itunes:keywords></itunes:keywords>
+      
+    </item>
     <item>
       <title><![CDATA[Episode 2 - Danielle Robinson and Joe Hand]]></title>
       <description><![CDATA[<p>
