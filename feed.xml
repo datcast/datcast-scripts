@@ -4,7 +4,7 @@
     <description><![CDATA[A cool show about Dat!]]></description>
     <link>https://dat-cast.hashbase.io/</link>
     <generator>Cast – https://tryca.st/</generator>
-    <lastBuildDate>Sat, 16 Jun 2018 07:17:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Sep 2018 19:00:23 GMT</lastBuildDate>
     <pubDate>Thu, 26 Apr 2018 15:59:03 GMT</pubDate>
     <copyright><![CDATA[Copyright Bret Comnes and Jim Pick]]></copyright>
     <language><![CDATA[en]]></language>
@@ -21,6 +21,121 @@
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
+    <item>
+      <title><![CDATA[Episode 4 - Stephen Whitmore (@noffle)]]></title>
+      <description><![CDATA[<p>
+Our guest on this episode is Stephen Whitmore, also known as "noffle"!
+</p>
+
+<h2>Guest: Stephen Whitmore</h2>
+
+<ul>
+  <li><a href="http://blog.eight45.net/">Blog: eight45.net</a></li>
+  <li><a href="https://github.com/noffle">GitHub: noffle</a></li>
+  <li><a href="https://twitter.com/noffle">Twitter: noffle</a></li>
+</ul>
+
+<h2>Cabal Chat</h2>
+
+<ul>
+  <li><a href="https://cabal-club.github.io/">Cabal Home Page</a></li>
+  <li><a href="https://github.com/cabal-club/cabal">GitHub: cabal-club/cabal</a></li>
+  <li><a href="https://github.com/cabal-club">GitHub: cabal-club</a></li>
+  <li><a href="http://moose-team.github.io/friends/">Moose Team Friends</a></li>
+  <li><a href="https://github.com/noffle/kappa-core">Github: noffle/kappa-core</a></li>
+  <li><a href="https://github.com/jimpick/cabal-ses-bot">GitHub: jimpick/cabal-ses-bot</a></li>
+</ul>
+
+<h2>Digital Democracy</h2>
+
+<ul>
+  <li><a href="https://www.digital-democracy.org/">Digital Democracy</a></li>
+  <li><a href="https://www.digital-democracy.org/mapeo/">Mapeo</a></li>
+  <li><a href="https://github.com/digidem/osm-p2p-syncfile">GitHub: digidem/osm-p2p-syncfile</a></li>
+  <li><a href="https://github.com/digidem/indexed-tarball">GitHub: digidem/indexed-tarball</a></li>
+</ul>
+
+<h2>hypergit and git-ssb</h2>
+
+<ul>
+  <li><a href="https://github.com/noffle/hypergit">GitHub: noffle/hypergit</a></li>
+  <li><a href="https://github.com/noffle/git-ssb-intro">GitHub: noffle/git-ssb-intro</a></li>
+  <li><a href="https://github.com/noffle/gitverse">GitHub: noffle/gitverse</a></li>
+</ul>
+
+<h2>Jim and Bret Updates</h2>
+
+<ul>
+  <li><a href="https://www.netlify.com/blog/2018/09/10/netlify-cli-2.0-now-in-beta-/">Netlify CLI 2</a></li>
+  <li><a href="https://www.youtube.com/watch?v=dFEFcdjBQug">Dat Multiwriter Preview</a></li>
+  <li><a href="https://github.com/ipfs/dynamic-data-and-capabilities">IPFS Dynamic Data and Capabilities</a></li>
+</ul>]]></description>
+      <guid isPermaLink="false">CGMRJ5UU-NNX9A4I</guid>
+      <pubDate>Fri, 21 Sep 2018 19:00:23 GMT</pubDate>
+      <enclosure url="https://dat-cast.hashbase.io/audio/datcast-episode-0004-2018-09-12-noffle.mp3" length="47012030" type="audio/mpeg"/>
+      <itunes:author></itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:subtitle><![CDATA[<p>
+Our guest on this episode is Stephen Whitmore, also known as "noffle"!
+</p>
+
+<h2>Guest: Stephen Whitmore</h2>
+
+<ul>
+  <li><a href="http://blog.eight45.net/">Blog: eight45.net</a></li>
+  <li><a href="https://github.com/noffle">GitHub: noffle</a></ ...]]></itunes:subtitle>
+      <itunes:summary><![CDATA[<p>
+Our guest on this episode is Stephen Whitmore, also known as "noffle"!
+</p>
+
+<h2>Guest: Stephen Whitmore</h2>
+
+<ul>
+  <li><a href="http://blog.eight45.net/">Blog: eight45.net</a></li>
+  <li><a href="https://github.com/noffle">GitHub: noffle</a></li>
+  <li><a href="https://twitter.com/noffle">Twitter: noffle</a></li>
+</ul>
+
+<h2>Cabal Chat</h2>
+
+<ul>
+  <li><a href="https://cabal-club.github.io/">Cabal Home Page</a></li>
+  <li><a href="https://github.com/cabal-club/cabal">GitHub: cabal-club/cabal</a></li>
+  <li><a href="https://github.com/cabal-club">GitHub: cabal-club</a></li>
+  <li><a href="http://moose-team.github.io/friends/">Moose Team Friends</a></li>
+  <li><a href="https://github.com/noffle/kappa-core">Github: noffle/kappa-core</a></li>
+  <li><a href="https://github.com/jimpick/cabal-ses-bot">GitHub: jimpick/cabal-ses-bot</a></li>
+</ul>
+
+<h2>Digital Democracy</h2>
+
+<ul>
+  <li><a href="https://www.digital-democracy.org/">Digital Democracy</a></li>
+  <li><a href="https://www.digital-democracy.org/mapeo/">Mapeo</a></li>
+  <li><a href="https://github.com/digidem/osm-p2p-syncfile">GitHub: digidem/osm-p2p-syncfile</a></li>
+  <li><a href="https://github.com/digidem/indexed-tarball">GitHub: digidem/indexed-tarball</a></li>
+</ul>
+
+<h2>hypergit and git-ssb</h2>
+
+<ul>
+  <li><a href="https://github.com/noffle/hypergit">GitHub: noffle/hypergit</a></li>
+  <li><a href="https://github.com/noffle/git-ssb-intro">GitHub: noffle/git-ssb-intro</a></li>
+  <li><a href="https://github.com/noffle/gitverse">GitHub: noffle/gitverse</a></li>
+</ul>
+
+<h2>Jim and Bret Updates</h2>
+
+<ul>
+  <li><a href="https://www.netlify.com/blog/2018/09/10/netlify-cli-2.0-now-in-beta-/">Netlify CLI 2</a></li>
+  <li><a href="https://www.youtube.com/watch?v=dFEFcdjBQug">Dat Multiwriter Preview</a></li>
+  <li><a href="https://github.com/ipfs/dynamic-data-and-capabilities">IPFS Dynamic Data and Capabilities</a></li>
+</ul>]]></itunes:summary>
+      <itunes:duration>0:58:14</itunes:duration>
+      <itunes:length>47012030</itunes:length>
+      <itunes:keywords></itunes:keywords>
+      
+    </item>
     <item>
       <title><![CDATA[Episode 3 - Tara Vancil and Paul Frazee]]></title>
       <description><![CDATA[<p>
